@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/22637350/how-to-sync-model-after-using-code-first-from-database-using-entity-framework-6

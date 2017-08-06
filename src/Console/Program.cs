@@ -1,11 +1,9 @@
 ﻿using Database;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Console
+
+namespace ConsoleProgram
 {
     class Program
     {
@@ -20,9 +18,16 @@ namespace Console
                 Stock = 10
             };
 
-            context.Item.Add(item);
-            context.SaveChanges();
+            //context.Item.Add(item);
+            //context.SaveChanges();
 
+            var quantityType = context.QuantityTypes.Select(u => u.Type);
+
+            for (int i = 0; i < quantityType.Count(); i++)
+            {
+                Console.WriteLine(quantityType.ToArray()[i]);
+            }
+            Console.Read();
         }
     }
 }
